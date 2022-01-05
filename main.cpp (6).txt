@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+class complex
+{
+  int real, img;
+   public:
+       complex()
+       {
+           real=0;
+           img=0;
+       }
+       complex ( int a, int b)
+       {
+           real=a;
+           img=b;
+       }
+   void show()
+   {
+       cout <<"\n "<<real<<"+"<<img<<"i";
+   }
+   complex sum (complex c1)
+   {
+       complex c2;
+       c2.real=real+ c1.real ;
+       c2.img=img+ c1.img;
+       return c2;
+   }
+};
+int main()
+{
+    complex a1(3,4);
+    cout<<"\nFirst complex number is :\t";
+    a1.show();
+    complex a2(5,7);
+    cout <<"\nSecond complex number is:\t";
+    a2.show();
+    complex a3;
+    a3=a2.sum(a1);
+    cout<<"\n sum =:";
+    a3.show ();
+}
