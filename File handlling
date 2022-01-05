@@ -1,0 +1,41 @@
+filehandlingincpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+    ofstream fout;
+    fout.open("Country.txt");
+    fout<<"\nUSA"<<"\t";
+    fout<<"\nUK"<<"\t";
+    fout<<"\nChina"<<"\t";
+    fout.close();
+
+    fout.open("Capital.txt");
+    fout<<"\nWashington"<<"\t";
+    fout<<"\nLondon"<<"\t";
+    fout<<"\nBeijing"<<"\t";
+    fout.close();
+
+    const int N=80;
+    char line[N];
+    ifstream fin;
+    fin.open("Country.txt");
+    cout<<"\nContents of country file"<<"\t";
+    while(fin)
+    {
+        fin.getline(line,N);
+        cout<<line;
+    }
+    fin.close();
+
+    fin.open("Capital.txt");
+    cout<<"\nContents of the capital files"<<"\t";
+    while (fin)
+    {
+        fin.getline(line,N);
+        cout<<line;
+    }
+    fin.close();
+    return 0;
+}
