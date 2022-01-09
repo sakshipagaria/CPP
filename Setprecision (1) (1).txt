@@ -1,0 +1,27 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main () 
+{
+    int a;
+    long l;
+    char ch;
+    float f;
+    double d;
+
+    cin >>a;
+    cin >>l ;
+    cin>>ch;
+    cin >>f;
+    cin>>d;
+
+    cout<<a<<endl;
+    cout <<l<<endl ;
+    cout <<ch <<endl;
+    cout <<f<<endl ;
+    cout <<d<<endl ;
+    cout<<fixed;
+    cout <<setprecision (3)<<f<<endl;
+    cout <<setprecision (9) <<d<<endl;
+    return 0;
+}
